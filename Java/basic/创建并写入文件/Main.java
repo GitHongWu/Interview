@@ -10,11 +10,11 @@ public class Main {
         file.createNewFile();
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
 
+        // create array
         int[] res = new int[]{45,68,0,2,3};
-
+        // write array one by one
         for (int i = 0; i < res.length; i++) {
             bufferedWriter.write(String.valueOf(res[i]));
-
             if (i != res.length - 1) {
                 bufferedWriter.write(" ");
             }

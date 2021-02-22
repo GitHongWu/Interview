@@ -16,6 +16,7 @@ public class Main {
         return jumpFloor(number-1) + jumpFloor(number-2);
     }
 
+    // dp
     public static int jumpFloor2(int number) {
         if (number <= 0) {
             return 0;
