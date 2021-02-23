@@ -26,5 +26,4 @@ function myFun(input, array){
   return result;
 }
 
-console.log("Evens");
 console.log(myFun(4, arrayList));

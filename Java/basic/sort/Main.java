@@ -5,9 +5,22 @@ import java.util.ArrayList;
 public class Main
 {
     public static void main(String[] args){
-        sort1();
-        sort2();
-        sort3();
+        // sort1();    //sort using Arrays
+        // sort2();    //sort using Collections
+        sort3();    //sort sub-array using Arrays
+        // sort4();    //Arrays lambda
+    }
+
+    public static void sort4(){
+        // sort by absolute  value
+        Integer[] array = {9,-2,10,3,-5,34,-22,7};
+        Arrays.sort(array, (a,b) -> (Integer.compare( Math.abs(a),  Math.abs(b))));
+        System.out.println(Arrays.toString(array));
+
+        // Lambda sort in ascending order
+        Integer[] arr = new Integer[]{13, 7, 6, 45, 21, 9, 101, 102};
+        Arrays.sort(arr, (a,b) -> a-b);
+        System.out.println(Arrays.toString(arr));
     }
 
     public static void sort1(){
@@ -46,7 +59,7 @@ public class Main
     // sort sub-array
     public static void sort3(){
         int[] arr = { 13, 7, 6, 45, 21, 9, 2, 100 }; 
-        Arrays.sort(arr, 1, 5); 
+        Arrays.sort(arr, 1, 5); // [13, 6, 7, 21, 45, 9, 2, 100]
         System.out.printf("Modified sub arr[] : %s", 
                           Arrays.toString(arr));
     }

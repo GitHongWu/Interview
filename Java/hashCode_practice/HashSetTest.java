@@ -10,10 +10,10 @@ public class HashSetTest {
     public static void main(String args[]) {
         String s1 = new String("aaa");
         String s2 = new String("aaa");
-        System.out.println(s1 == s2);
-        System.out.println(s1.equals(s2));
-        System.out.println(s1.hashCode());
-        System.out.println(s2.hashCode());
+        System.out.println(s1 == s2);   //false
+        System.out.println(s1.equals(s2));  //true
+        System.out.println(s1.hashCode());  //96321
+        System.out.println(s2.hashCode());  //96321
 
         // 这是因为String类已经重写了equals()方法和hashcode()方法，所以hashset认为它们是相等的对象，进行了重复添加
         HashSet<String> hashset = new HashSet<String>();
@@ -24,6 +24,7 @@ public class HashSetTest {
             System.out.println(it.next());
         }
 
+        // // HashMap����key
         // HashMap<String, String> h = new HashMap<String, String>();
         // h.put("a", "1");
         // h.put("a", "2");
