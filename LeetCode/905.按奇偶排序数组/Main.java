@@ -8,8 +8,9 @@ public class Main {
     // 输出 [4,2,3,1]，[2,4,1,3] 和 [4,2,1,3] 也会被接受。
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(unstableSort(new int[] {1,2,3,4})));
-        System.out.println(Arrays.toString(stableSort(new int[] {1,2,3,4})));
+        // System.out.println(Arrays.toString(unstableSort(new int[] {1,2,3,4})));
+        // System.out.println(Arrays.toString(stableSort(new int[] {1,2,3,4})));
+        System.out.println(Arrays.toString(sortArray(new int[]{1,2,5,6,7,3,4})));
     }
 
     // unstable
@@ -63,4 +64,31 @@ public class Main {
         }
         return array;
     }
+
+    // sort an integer array in the order of all event numbers in the first half + odd second part. And each part sordid in ascending order.
+    // in place sort
+    // input: int[] a = {1,2,5,6,7,3,4};
+    // output: a={2,4,6,1,3,5,7}
+    public static int[] sortArray(int[] arr){
+        int n = arr.length;
+        if(n<=1) return arr;
+
+        int k = 0;
+        for(int i = 0; i< n; i++){
+            if(arr[i]%2==0){
+                int j = i;
+                while(k<j){ //swap even number to the front
+                    int temp = arr[j];
+                    arr[j] = arr[j-1];
+                    arr[j-1] = temp;
+                    j--;
+                }
+                k++;
+            }   //end if %2==0
+        }
+        Arrays.sort(arr, 0, k);
+        Arrays.sort(arr, k, n);
+        return arr;
+    }
+
 }
