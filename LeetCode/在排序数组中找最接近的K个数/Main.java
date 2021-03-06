@@ -8,18 +8,28 @@ public class Main {
         // 如果 A = [1, 2, 3], target = 2 and k = 3, 那么返回 [2, 1, 3].
         // 如果 A = [1, 4, 6, 8], target = 3 and k = 3, 那么返回 [4, 1, 6].
         // O(logn + k) 的时间复杂度
+
+        // 解题思路：array是sort的，所以可以用binarySearch找到target或是离target最近的左边的数，比如target是20，数组是[10, 30]则
+        // 会找到10的index。之后再用双指针，left是最接近target左边的数，right是left+1，然后像两边比较遍历
         int array[] = new int[]{1, 2, 3};
         int array2[] = new int[]{1, 4, 6, 8};
-        int target = 2;
-        int k = 3;  // how many result need to return
+        int target = 7;
+        int k = 4;  // how many result need to return
 
-        // findClosest(array2, target, k);
-        System.out.println(binarySearch(array2, target));
+        // System.out.println(binarySearch(array2, target));
+        findClosest(array2, target, k);
+        
     }
-
-    public static void findClosest(int arr[], int tar, int k){
+    /**
+     * @param arr: an integer source array
+     * @param tar: An target integer
+     * @param k: An integer,how many result need to return
+     * @return: an integer array
+     */
+    public static int[] findClosest(int arr[], int tar, int k){
         int n = arr.length;
-        if(arr == null || n == 0) return;
+        if(arr == null || n == 0 || k > n) return null;
+
 
         int[] result = new int[k];
         int left = binarySearch(arr, tar); //find the most closest number or its left index
@@ -44,19 +54,19 @@ public class Main {
             }
         }
         System.out.println(Arrays.toString(result));
-        // return result;
+        return result;
     }
 
     // 最接近tar的left作为index
     public static int binarySearch(int arr[], int tar){
         int left = 0;
         int right = arr.length-1;
-        while (left+1 <= right){    // 左右两边的数距离target一样远时(例如25 35，target是30)，我们需要二分搜索出左边那位，就要while(left+1 < right)来提前一次终止循环，使left落在25，同时left = mid，不能=mid+1防止left错过mid数。
+        while (left+1 < right){    // 左右两边的数距离target一样远时(例如25 35，target是30)，我们需要二分搜索出左边那位，就要while(left+1 < right)来提前一次终止循环，使left落在25，同时left = mid，不能=mid+1防止left错过mid数。
             int mid = left + (right - left) / 2;
             if (arr[mid] == tar) return mid;
             else if (arr[mid] < tar) left = mid;
             else right = mid;
-            System.out.println(mid + " " + left + " " + right);
+            // System.out.println(mid + " " + left + " " + right);
         }
         return left;
     }
