@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         int target = 0;
         int[] array = new int[]{-10, 0, 10, 20, -10, -40};
-        int[] array2 = new int[]{-2,0,1,1,2};
+        int[] array2 = new int[]{-1,0,1,2,-1,-4};
 
         sum2tar(array2, target);
 

@@ -53,7 +53,7 @@ public class Main {
         }
 
         Arrays.sort(a);
-        System.out.println(Arrays.toString(a));
+        System.out.println("Sort: " + Arrays.toString(a));
 
         int max_index = n-1;
         for (int i = 0; i < n; i++){
