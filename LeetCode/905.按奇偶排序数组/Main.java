@@ -16,7 +16,7 @@ public class Main {
     // unstable
     // time complexity: O(n)
     // space complexity: O(1)
-    // 双指针从前后往中间遍历
+    // 双指针从前后往中间遍历(double pointer approching to mid)
     public static int[] unstableSort(int[] array){
         int n = array.length;
         if (n <= 1) return array;
@@ -45,6 +45,8 @@ public class Main {
     // time complexity: O(n^2)
     // space complexity: O(1)
     // 遍历数组，找到偶数后swap，swap到已经sort偶数的最后一位，k是偶数最后一位的位置
+    // Traverse the whole array, swap if meet even number, swap to the last position of sorted array,
+    // k is the index of last position sorted even number
     public static int[] stableSort(int[] array){
         int n = array.length;
         if (n <= 1) return array;
