@@ -23,44 +23,8 @@ public class Main {
         // int penny[] = new int[]{5};
         // int aim = 6;
         // System.out.println("DP: " + countWays(penny, aim));
-        System.out.println("recursion: " + countWays2(penny, aim));
-    }
-
-    // recursion
-    // 缺点：在零钱找不开的情况下无法正确得到结果，因为每次都会在return的基础上+1，所以即使最后的子问题
-    // 已经return -1， 但return之后还是会+1
-    // 解决方案：Tail-recursion
-    public static int countWays3(int[] penny, int aim) {
-        if(aim == 0) return 0;
-        int min = Integer.MAX_VALUE;
-        for(int i : penny){
-            if(aim >= i){
-                min = Math.min(min, countWays3(penny, aim-i) + 1);  // 若是子问题return -1，这里还是会+1
-            }
-            else{
-                min = -1;
-            }
-        }
-        return min;
-    }
-    
-    // Tail-recursion
-    // 初始化global min来保证每个递归的最小值，用count来记录每一次递归
-    // 当无法被找零时，直接return。当可以被找零时，更新min值
-    static int min = Integer.MAX_VALUE; // declare global variable
-    public static int countWays2(int[] penny, int aim) {
-        _countWays2(penny, aim, 0);
-        // System.out.println(result + " " + Integer.MAX_VALUE);
-        // if (result == 0) return -1;
-        return min == Integer.MAX_VALUE ? -1 : min;
-    }
-    public static void _countWays2(int[] penny, int aim, Integer count) {
-        if(aim < 0) return;
-        if(aim == 0) min = Math.min(min, count);
-        
-        for(int i : penny){
-            _countWays2(penny, aim-i, count+1);
-        }
+        // System.out.println("recursion: " + countWays3(penny, aim));
+        System.out.println("Memo: " + countWays_memo(penny, aim));
     }
 
     // DP
@@ -86,5 +50,56 @@ public class Main {
             }  
         }  
         return pd[n-1][aim];  
+    }
+
+    // memo + recursion
+    // recursion with memo
+    public static int countWays_memo(int[] penny, int aim){
+        int memo[] = new int[aim+1];
+        memo[0] = 0;    // init memo
+        return _countWays_memo(penny, aim, memo);
+    }
+    public static int _countWays_memo(int[] penny, int aim, int[] memo) {
+        if(aim <= 0) return 0;
+        if(memo[aim] != 0) return memo[aim];
+        int min = Integer.MAX_VALUE;
+        for(int i : penny){
+            min = Math.min(min, _countWays_memo(penny, aim-i, memo) + 1);
+        }
+        memo[aim] = min;
+        return min;
+    }
+
+    // recursion
+    // 零钱找不开时不可用!!!
+    // 缺点：在零钱找不开的情况下无法正确得到结果，因为每次都会在return的基础上+1，所以即使最后的子问题
+    // 没有被for里面handle住便会return min既为MAX_VALUE， 然后return之后还是会+1
+    // 解决方案：Tail-recursion
+    public static int countWays3(int[] penny, int aim) {
+        if(aim <= 0) return 0;
+        int min = Integer.MAX_VALUE;
+        for(int i : penny){
+            min = Math.min(min, countWays3(penny, aim-i) + 1);  // 若是子问题return -1，这里还是会+1
+        }
+        return min;
+    }
+    
+    // Tail-recursion
+    // 初始化global min来保证每个递归的最小值，用count来记录每一次递归
+    // 当无法被找零时，直接return。当可以被找零时，更新min值
+    static int min = Integer.MAX_VALUE; // declare global variable
+    public static int countWays2(int[] penny, int aim) {
+        _countWays2(penny, aim, 0);
+        // System.out.println(result + " " + Integer.MAX_VALUE);
+        // if (result == 0) return -1;
+        return min == Integer.MAX_VALUE ? -1 : min;
+    }
+    public static void _countWays2(int[] penny, int aim, Integer count) {
+        if(aim < 0) return;
+        if(aim == 0) min = Math.min(min, count);
+        
+        for(int i : penny){
+            _countWays2(penny, aim-i, count+1);
+        }
     }
 }
