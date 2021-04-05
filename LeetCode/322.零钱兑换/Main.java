@@ -6,50 +6,42 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        // 给定数组penny及它的大小(小于等于50)，同时给定一个整数aim，请返回有多少种方法可以凑成aim。
+        // https://leetcode-cn.com/problems/coin-change/solution/dong-tai-gui-hua-yin-ru-pian-zhu-bu-tan-suo-zhao-l/
+        // 给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成
+        // 总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回?-1。
         // 测试样例：
         // input: [1,2,4],3,3
         // output: 2
 
-        // 解析：设dp[n][m]为使用前n中货币凑成的m的种数，那么就会有两种情况：
-        // 使用第n种货币：dp[n-1][m]+dp[n-1][m-penny[n]]
-        // 不用第n种货币：dp[n-1][m]，为什么不使用第n种货币呢，因为penny[n]>m。
-        // 这样就可以求出当m>=penny[n]时 dp[n][m] = dp[n-1][m]+dp[n-1][m-penny[n]]，否则，dp[n][m] = dp[n-1][m]
-
         // int penny[] = new int[]{1,2,4};
         // int aim = 3;    // output: 2
-        int penny[] = new int[]{1,2,5};
-        int aim = 11;   // output: 3
-        // int penny[] = new int[]{5};
-        // int aim = 6;
-        // System.out.println("DP: " + countWays(penny, aim));
+        // int penny[] = new int[]{1,2,5};
+        // int aim = 11;   // output: 3
+        int penny[] = new int[]{5};
+        int aim = 6; // -1
+        // int penny[] = new int[]{1,2147483647};
+        // int aim = 2;   // output: 2
+
         // System.out.println("recursion: " + countWays3(penny, aim));
-        System.out.println("Memo: " + countWays_memo(penny, aim));
+        // System.out.println("Memo: " + countWays_memo(penny, aim));
+        System.out.println("DP: " + countWays_dp(penny, aim));
     }
 
     // DP
-    public static int countWays(int[] penny, int aim) {
-        int n = penny.length;
-        if(n==0||penny==null||aim<0){  
-         return 0;     
-        }  
-        int[][] pd = new int[n][aim+1];  
-        for(int i=0;i<n;i++){  
-         pd[i][0] = 1;     
-        }  
-        for(int i=1;penny[0]*i<=aim;i++){  
-         pd[0][penny[0]*i] = 1;     
-        }  
-        for(int i=1;i<n;i++){  
-            for(int j=0;j<=aim;j++){  
-                if(j>=penny[i]){  
-                    pd[i][j] = pd[i-1][j]+pd[i][j-penny[i]];  
-                }else{  
-                    pd[i][j] = pd[i-1][j];  
-                }  
-            }  
-        }  
-        return pd[n-1][aim];  
+    public static int countWays_dp(int[] pennys, int aim) {
+        int[] dp = new int[aim + 1];
+        Arrays.fill(dp, aim+ 1);    // 初始化备忘录,用amount+1填满备忘录,amount+1 表示该值不可以用硬币凑出来
+
+
+        dp[0] = 0;   // 初始化0
+        for(int i = 1; i <= aim; i++){
+            for(int penny : pennys){
+                if (i - penny >= 0){
+                    dp[i] = Math.min(dp[i], dp[i-penny]+1);
+                }
+            }
+        }
+        return dp[aim] == aim+1 ? -1 : dp[aim]; //若==aim+1则没法找，return-1
     }
 
     // memo + recursion
@@ -61,12 +53,14 @@ public class Main {
     }
     public static int _countWays_memo(int[] penny, int aim, int[] memo) {
         if(aim <= 0) return 0;
+        // check if already computed in memo
         if(memo[aim] != 0) return memo[aim];
+
         int min = Integer.MAX_VALUE;
         for(int i : penny){
             min = Math.min(min, _countWays_memo(penny, aim-i, memo) + 1);
         }
-        memo[aim] = min;
+        memo[aim] = min;    // update memo
         return min;
     }
 
