@@ -6,16 +6,30 @@ public class Main {
 
     // Input  : x = 10, n = 2
     // Output : 1
-    // Explanation: 10 = 12 + 32, Hence total 1 possibility
+    // Explanation: 10 = 1^2 + 3^2, Hence total 1 possibility
 
     // Input  : x = 100, n = 2
     // Output : 3
     // Explanation: 
-    // 100 = 102 OR 62 + 82 OR 12 + 32 + 42 + 52 + 72 Hence total 3 possibilities
+    // 100 = 10^2 OR 6^2 + 8^2 OR 1^2 + 3^2 + 4^2 + 5^2 + 7^2 Hence total 3 possibilities
 
     public static void main(String[] args) {
         int x = 100, n = 2;
-        System.out.println(checkRecursive(x, n, 1, 0));
+        System.out.println(powerSum(x, n));
+        // System.out.println(checkRecursive(x, n, 1, 0));
+    }
+
+    public static int powerSum(int target, int power){
+        int dp[] = new int[target+1];
+        dp[0] = 1;
+        for (int i = 1; i <= target; i++){
+            int i2power = (int)Math.pow(i,power);
+            for(int j = target; j > i2power-1; j--){
+                dp[j] += dp[j-i2power];
+            }
+        }
+        System.out.println(Arrays.toString(dp));
+        return dp[target];
     }
 
     // Function to check power representations recursively
