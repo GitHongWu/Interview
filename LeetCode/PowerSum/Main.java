@@ -14,19 +14,20 @@ public class Main {
     // 100 = 10^2 OR 6^2 + 8^2 OR 1^2 + 3^2 + 4^2 + 5^2 + 7^2 Hence total 3 possibilities
 
     public static void main(String[] args) {
-        int x = 100, n = 2;
+        int x = 5, n = 2;
         System.out.println(powerSum(x, n));
         // System.out.println(checkRecursive(x, n, 1, 0));
     }
 
     public static int powerSum(int target, int power){
         int dp[] = new int[target+1];
-        dp[0] = 1;
+        dp[0] = 1;  // init first as 1, rest be 0
         for (int i = 1; i <= target; i++){
             int i2power = (int)Math.pow(i,power);
-            for(int j = target; j > i2power-1; j--){
+            for(int j = target; j >= i2power; j--){
                 dp[j] += dp[j-i2power];
             }
+            System.out.println(Arrays.toString(dp));
         }
         System.out.println(Arrays.toString(dp));
         return dp[target];
