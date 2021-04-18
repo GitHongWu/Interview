@@ -11,7 +11,7 @@ public class Main {
         // if((0&1)==0) System.out.println("t");
 
         // string2Bits();   // any string convert to binary
-        // int2Bits();  // convert int to bits in string format with 8 digits
+        // int2String();  // convert int to bits in string format with 8 digits
         // int2Bits2();  // convert int to bits with fix size
 
         N_bits(2);   // generate all possible bits of length N
