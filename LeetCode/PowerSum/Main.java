@@ -14,9 +14,9 @@ public class Main {
     // 100 = 10^2 OR 6^2 + 8^2 OR 1^2 + 3^2 + 4^2 + 5^2 + 7^2 Hence total 3 possibilities
 
     public static void main(String[] args) {
-        int x = 5, n = 2;
+        int x = 1, n = 1;
         System.out.println(powerSum(x, n));
-        // System.out.println(checkRecursive(x, n, 1, 0));
+        // System.out.println(recursive(x, n, 1, 0));
     }
 
     public static int powerSum(int target, int power){
@@ -34,7 +34,7 @@ public class Main {
     }
 
     // Function to check power representations recursively
-    static int checkRecursive(int x, int n, int curr_num,
+    static int recursive(int x, int n, int curr_num,
                               int curr_sum)
     {
         // Initialize number of ways to express
