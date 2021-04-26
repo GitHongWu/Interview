@@ -15,7 +15,7 @@ public class HashSetTest {
         System.out.println(s1.hashCode());  //96321
         System.out.println(s2.hashCode());  //96321
 
-        // 杩欐槸鍥犱负String绫诲凡缁忛噸鍐欎簡equals()鏂规硶鍜宧ashcode()鏂规硶锛屾墍浠ashset璁や负瀹冧滑鏄浉绛夌殑瀵硅薄锛岃繘琛屼簡閲嶅娣诲姞
+        // 这是因为String类已经重写了equals()方法和hashcode()方法，所以hashset认为它们是相等的对象，进行了重复添加        
         HashSet<String> hashset = new HashSet<String>();
         hashset.add(s1);
         hashset.add(s2);
