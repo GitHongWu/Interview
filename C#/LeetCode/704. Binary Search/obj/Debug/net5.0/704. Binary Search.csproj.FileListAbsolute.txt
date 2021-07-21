@@ -1,0 +1,16 @@
+D:\Document\Interview_coding_practice\C#\LeetCode\704. Binary Search\obj\Debug\net5.0\704. Binary Search.csprojAssemblyReference.cache
+D:\Document\Interview_coding_practice\C#\LeetCode\704. Binary Search\obj\Debug\net5.0\704. Binary Search.GeneratedMSBuildEditorConfig.editorconfig
+D:\Document\Interview_coding_practice\C#\LeetCode\704. Binary Search\obj\Debug\net5.0\704. Binary Search.AssemblyInfoInputs.cache
+D:\Document\Interview_coding_practice\C#\LeetCode\704. Binary Search\obj\Debug\net5.0\704. Binary Search.AssemblyInfo.cs
+D:\Document\Interview_coding_practice\C#\LeetCode\704. Binary Search\obj\Debug\net5.0\704. Binary Search.csproj.CoreCompileInputs.cache
+D:\Document\Interview_coding_practice\C#\LeetCode\704. Binary Search\bin\Debug\net5.0\704. Binary Search.exe
+D:\Document\Interview_coding_practice\C#\LeetCode\704. Binary Search\bin\Debug\net5.0\704. Binary Search.deps.json
+D:\Document\Interview_coding_practice\C#\LeetCode\704. Binary Search\bin\Debug\net5.0\704. Binary Search.runtimeconfig.json
+D:\Document\Interview_coding_practice\C#\LeetCode\704. Binary Search\bin\Debug\net5.0\704. Binary Search.runtimeconfig.dev.json
+D:\Document\Interview_coding_practice\C#\LeetCode\704. Binary Search\bin\Debug\net5.0\704. Binary Search.dll
+D:\Document\Interview_coding_practice\C#\LeetCode\704. Binary Search\bin\Debug\net5.0\ref\704. Binary Search.dll
+D:\Document\Interview_coding_practice\C#\LeetCode\704. Binary Search\bin\Debug\net5.0\704. Binary Search.pdb
+D:\Document\Interview_coding_practice\C#\LeetCode\704. Binary Search\obj\Debug\net5.0\704. Binary Search.dll
+D:\Document\Interview_coding_practice\C#\LeetCode\704. Binary Search\obj\Debug\net5.0\ref\704. Binary Search.dll
+D:\Document\Interview_coding_practice\C#\LeetCode\704. Binary Search\obj\Debug\net5.0\704. Binary Search.pdb
+D:\Document\Interview_coding_practice\C#\LeetCode\704. Binary Search\obj\Debug\net5.0\704. Binary Search.genruntimeconfig.cache

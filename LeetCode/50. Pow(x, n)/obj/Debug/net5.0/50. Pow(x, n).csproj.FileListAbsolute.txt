@@ -1,0 +1,16 @@
+D:\Document\Interview_coding_practice\C#\LeetCode\50. Pow(x, n)\bin\Debug\net5.0\50. Pow(x, n).exe
+D:\Document\Interview_coding_practice\C#\LeetCode\50. Pow(x, n)\bin\Debug\net5.0\50. Pow(x, n).deps.json
+D:\Document\Interview_coding_practice\C#\LeetCode\50. Pow(x, n)\bin\Debug\net5.0\50. Pow(x, n).runtimeconfig.json
+D:\Document\Interview_coding_practice\C#\LeetCode\50. Pow(x, n)\bin\Debug\net5.0\50. Pow(x, n).runtimeconfig.dev.json
+D:\Document\Interview_coding_practice\C#\LeetCode\50. Pow(x, n)\bin\Debug\net5.0\50. Pow(x, n).dll
+D:\Document\Interview_coding_practice\C#\LeetCode\50. Pow(x, n)\bin\Debug\net5.0\ref\50. Pow(x, n).dll
+D:\Document\Interview_coding_practice\C#\LeetCode\50. Pow(x, n)\bin\Debug\net5.0\50. Pow(x, n).pdb
+D:\Document\Interview_coding_practice\C#\LeetCode\50. Pow(x, n)\obj\Debug\net5.0\50. Pow(x, n).csprojAssemblyReference.cache
+D:\Document\Interview_coding_practice\C#\LeetCode\50. Pow(x, n)\obj\Debug\net5.0\50. Pow(x, n).GeneratedMSBuildEditorConfig.editorconfig
+D:\Document\Interview_coding_practice\C#\LeetCode\50. Pow(x, n)\obj\Debug\net5.0\50. Pow(x, n).AssemblyInfoInputs.cache
+D:\Document\Interview_coding_practice\C#\LeetCode\50. Pow(x, n)\obj\Debug\net5.0\50. Pow(x, n).AssemblyInfo.cs
+D:\Document\Interview_coding_practice\C#\LeetCode\50. Pow(x, n)\obj\Debug\net5.0\50. Pow(x, n).csproj.CoreCompileInputs.cache
+D:\Document\Interview_coding_practice\C#\LeetCode\50. Pow(x, n)\obj\Debug\net5.0\50. Pow(x, n).dll
+D:\Document\Interview_coding_practice\C#\LeetCode\50. Pow(x, n)\obj\Debug\net5.0\ref\50. Pow(x, n).dll
+D:\Document\Interview_coding_practice\C#\LeetCode\50. Pow(x, n)\obj\Debug\net5.0\50. Pow(x, n).pdb
+D:\Document\Interview_coding_practice\C#\LeetCode\50. Pow(x, n)\obj\Debug\net5.0\50. Pow(x, n).genruntimeconfig.cache
