@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Document\\Interview_coding_practice\\C#\\Empty\\Empty\\Empty.csproj": {}
+    "D:\\Document\\Interview_coding_practice\\C#\\_Empty\\Empty.csproj": {}
   },
   "projects": {
-    "D:\\Document\\Interview_coding_practice\\C#\\Empty\\Empty\\Empty.csproj": {
+    "D:\\Document\\Interview_coding_practice\\C#\\_Empty\\Empty.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Document\\Interview_coding_practice\\C#\\Empty\\Empty\\Empty.csproj",
+        "projectUniqueName": "D:\\Document\\Interview_coding_practice\\C#\\_Empty\\Empty.csproj",
         "projectName": "Empty",
-        "projectPath": "D:\\Document\\Interview_coding_practice\\C#\\Empty\\Empty\\Empty.csproj",
+        "projectPath": "D:\\Document\\Interview_coding_practice\\C#\\_Empty\\Empty.csproj",
         "packagesPath": "C:\\Users\\hongc\\.nuget\\packages\\",
-        "outputPath": "D:\\Document\\Interview_coding_practice\\C#\\Empty\\Empty\\obj\\",
+        "outputPath": "D:\\Document\\Interview_coding_practice\\C#\\_Empty\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hongc\\AppData\\Roaming\\NuGet\\NuGet.Config",
