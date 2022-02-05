@@ -8,6 +8,7 @@ namespace SwordOffer_II_001
         static void Main(string[] args)
         {
             // https://leetcode-cn.com/problems/xoh6Oh/
+            // 7 / (-3) = -2
             int a = 22;
             int b = 3;
             System.Console.WriteLine(divide(a, b));

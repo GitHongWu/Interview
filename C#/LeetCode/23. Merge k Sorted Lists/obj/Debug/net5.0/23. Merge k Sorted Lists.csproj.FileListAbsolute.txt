@@ -1,0 +1,16 @@
+D:\Document\Interview_coding_practice\C#\LeetCode\23. Merge k Sorted Lists\obj\Debug\net5.0\23. Merge k Sorted Lists.csprojAssemblyReference.cache
+D:\Document\Interview_coding_practice\C#\LeetCode\23. Merge k Sorted Lists\obj\Debug\net5.0\23. Merge k Sorted Lists.GeneratedMSBuildEditorConfig.editorconfig
+D:\Document\Interview_coding_practice\C#\LeetCode\23. Merge k Sorted Lists\obj\Debug\net5.0\23. Merge k Sorted Lists.AssemblyInfoInputs.cache
+D:\Document\Interview_coding_practice\C#\LeetCode\23. Merge k Sorted Lists\obj\Debug\net5.0\23. Merge k Sorted Lists.AssemblyInfo.cs
+D:\Document\Interview_coding_practice\C#\LeetCode\23. Merge k Sorted Lists\obj\Debug\net5.0\23. Merge k Sorted Lists.csproj.CoreCompileInputs.cache
+D:\Document\Interview_coding_practice\C#\LeetCode\23. Merge k Sorted Lists\bin\Debug\net5.0\23. Merge k Sorted Lists.exe
+D:\Document\Interview_coding_practice\C#\LeetCode\23. Merge k Sorted Lists\bin\Debug\net5.0\23. Merge k Sorted Lists.deps.json
+D:\Document\Interview_coding_practice\C#\LeetCode\23. Merge k Sorted Lists\bin\Debug\net5.0\23. Merge k Sorted Lists.runtimeconfig.json
+D:\Document\Interview_coding_practice\C#\LeetCode\23. Merge k Sorted Lists\bin\Debug\net5.0\23. Merge k Sorted Lists.runtimeconfig.dev.json
+D:\Document\Interview_coding_practice\C#\LeetCode\23. Merge k Sorted Lists\bin\Debug\net5.0\23. Merge k Sorted Lists.dll
+D:\Document\Interview_coding_practice\C#\LeetCode\23. Merge k Sorted Lists\bin\Debug\net5.0\ref\23. Merge k Sorted Lists.dll
+D:\Document\Interview_coding_practice\C#\LeetCode\23. Merge k Sorted Lists\bin\Debug\net5.0\23. Merge k Sorted Lists.pdb
+D:\Document\Interview_coding_practice\C#\LeetCode\23. Merge k Sorted Lists\obj\Debug\net5.0\23. Merge k Sorted Lists.dll
+D:\Document\Interview_coding_practice\C#\LeetCode\23. Merge k Sorted Lists\obj\Debug\net5.0\ref\23. Merge k Sorted Lists.dll
+D:\Document\Interview_coding_practice\C#\LeetCode\23. Merge k Sorted Lists\obj\Debug\net5.0\23. Merge k Sorted Lists.pdb
+D:\Document\Interview_coding_practice\C#\LeetCode\23. Merge k Sorted Lists\obj\Debug\net5.0\23. Merge k Sorted Lists.genruntimeconfig.cache
