@@ -1,9 +1,0 @@
-{
-    "files.exclude": {
-        "**/.settings": true
-    },
-    "files.associations": {
-        "iostream": "cpp"
-    },
-    "python.pythonPath": "C:\\Users\\hongc\\AppData\\Local\\Programs\\Python\\Python38\\python.exe"
-}
